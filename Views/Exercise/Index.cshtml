@@ -1,0 +1,40 @@
+﻿@{
+    //esercizio-1
+    string name = "Totò";
+    string surname = "Sapore";
+
+    //esercizio-2
+    int SomebodyOnceToldMeTheWorldIsGonnaRollMe(int n) {
+        int sum = 0;
+        for(int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+    int userNumber = SomebodyOnceToldMeTheWorldIsGonnaRollMe(10);
+
+    //esercizio-3
+    string Dante = "nel mezzo del cammin di nostra vita";
+    char target = 'a';
+    int danteCount = Dante.Count(f => (f == target));
+
+    //esercizio-4
+
+
+}
+
+<div>
+    <h1>Razor</h1>
+    <p>Esercizio 1</p>
+    <h3>@name @surname</h3>
+    <hr />
+    <p>Esercizio 2</p>
+    <h3>@userNumber</h3>
+    <hr />
+    <p>Esercizio 3</p>
+    <h3>@danteCount</h3>
+    <hr />
+    <p>Esercizio 4</p>
+    <h3></h3>
+    <hr />
+</div>

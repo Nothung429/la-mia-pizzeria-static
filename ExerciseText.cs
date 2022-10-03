@@ -16,10 +16,8 @@
 
 //PARTE 2
 
-//Facciamo quindi qualche esperimento:
-//una parte ci porterà a fare esercizi con Razor
-//la seconda a fare delle prove con i layout di .Net Core MVC
 //1- Esercizi con Razor: Create un nuovo controller di nome Esercizi per implementare le richieste nel file che vi allego. Ovviamente non dovrete realizzarle dentro il controller ma dovrete creare l’apposita vista (per esempio Index) dove inserirete il codice delle soluzioni.
+
 //2- Esercizio Layout: Create un nuovo layout e inserite al suo interno il codice che secondo voi definisce lo scheletro dell’applicazione e che dovrà essere utilizzato in altre pagine future del vostro progetto. In questo caso quindi, se avete seguito l’esercizio precedente dovreste trovarvi con la vostra vista Index senza layout (Layout = null) che dovrà quindi essere rimossa per dare spazio a questa nuova versione e struttura del progetto.
 
 //Esercizi Razor:
