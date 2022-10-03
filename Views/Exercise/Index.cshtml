@@ -24,29 +24,57 @@
         int rnd = new Random().Next(1, 90);
         RandomList.Add(rnd);
     }
+
+    //esercizio-5
+    DateTime today = DateTime.Now;
+
+    //esercizio-6
+    DateTime lastWeek = DateTime.Now.AddDays(-7);
+    string dayName = DateTime.Now.DayOfWeek.ToString();
+    DateTime nextYear = DateTime.Now.AddDays(+365);
+    string dayNameNextYear = nextYear.DayOfWeek.ToString();
 }
 
 <div>
-    <h1>Razor</h1>
-    <p>Esercizio 1</p>
-    <h3>@name @surname</h3>
-    <hr />
-    <p>Esercizio 2</p>
-    <h3>@userNumber</h3>
-    <hr />
-    <p>Esercizio 3</p>
-    <h3>@danteCount</h3>
-    <hr />
-    <p>Esercizio 4</p>
-    <h3>
-        @foreach(int num in RandomList) {
-            if(num > 20 && num < 70) {
-                <span class="me-3">@num</span>
+    <h1>Razor Exercise</h1>
+    <div>
+        <p>Esercizio 1</p>
+        <h3>@name @surname</h3>
+        <hr />
+    </div>
+    <div>
+        <p>Esercizio 2</p>
+        <h3>@userNumber</h3>
+        <hr />
+    </div>
+    <div>
+        <p>Esercizio 3</p>
+        <h3>@danteCount</h3>
+        <hr />
+    </div>
+    <div>
+        <p>Esercizio 4</p>
+        <h3>
+            @foreach (int num in RandomList)
+            {
+                if (num > 20 && num < 70)
+                {
+                    <span class="me-3">@num</span>
+                }
             }
-        }
-    </h3>
-    <hr />
-    <p>Esercizio 5</p>
-    <h3></h3>
-    <hr />
+        </h3>
+        <hr />
+    </div>
+    <div>
+        <p>Esercizio 5</p>
+        <h3>@today</h3>
+        <hr />
+    </div>
+    <div>
+        <p>Esercizio 6</p>
+        <h3>@lastWeek</h3>
+        <h3>@dayName</h3>
+        <h3>@dayNameNextYear</h3>
+        <hr />
+    </div>
 </div>
