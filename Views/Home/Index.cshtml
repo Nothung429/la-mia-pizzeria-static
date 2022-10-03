@@ -1,8 +1,46 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    //ViewData["Title"] = "Home Page";
+
+    Layout = null;
+
+    List<Pizza> ListPizza = new List<Pizza>();
+
+    ListPizza.Add(new Pizza("Pizza Margherita", "bona come er pane", "~/img/cane.png", 3.99));
+    ListPizza.Add(new Pizza("Pizza Capricciosa", "idem co patate", "~/img/cane.png", 7.99));
+    ListPizza.Add(new Pizza("Pizza Diavola", "er duca", "~/img/cane.png", 12.99));
+    ListPizza.Add(new Pizza("Pizza Quattro Formaggi", "fiocina", "~/img/cane.png", 9.99));
+    ListPizza.Add(new Pizza("Pizza Coi Funghi", "er monnezza", "~/img/cane.png", 11.99));
+    ListPizza.Add(new Pizza("Pizza Salsiccia e Salame", "tonino u lurdu", "~/img/cane.png", 5.99));
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - la_mia_pizzeria_static</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+
+    <body>
+        <div>
+            <h1 class="text-center display-4">Welcome</h1>
+            <ul>
+            @foreach (var pizza in ListPizza)
+                {
+                    <li>
+                        <h3>@pizza.Name</h3>
+                        <p>@pizza.Description</p>
+                        <img width="100" src="@pizza.Image">
+                        <h4>@pizza.Price€</h4>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </body>
+</html>
